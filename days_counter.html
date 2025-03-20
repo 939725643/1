@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我們在一起的天數</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #FFF8DC; /* 淺黃色卡片 */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            color: #FF914D;
+            margin: 10px 0;
+        }
+        #daysTogether {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>我們重逢至今</h2>
+        <p id="daysTogether">計算中...</p>
+        <h2>天 💖</h2>
+    </div>
+
+    <script>
+        function calculateDays() {
+            var startDate = new Date("2020-07-30"); // 你們重逢的日期
+            var today = new Date();
+            var timeDiff = today - startDate;
+            var daysTogether = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            document.getElementById("daysTogether").innerText = daysTogether;
+        }
+
+        calculateDays();
+    </script>
+
+</body>
+</html>
